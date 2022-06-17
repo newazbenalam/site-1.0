@@ -1,0 +1,4 @@
+cd /to/dir
+pipenv shell
+cd src
+python manage.py runserver

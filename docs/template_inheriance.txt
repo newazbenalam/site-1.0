@@ -1,0 +1,15 @@
+#### On template html side
+
+{% block head_title %}
+
+{% endblock %}
+
+#### On html extened templated side
+
+{% extends "base.html" %}
+
+{% block head_title %}
+
+{% endblock %}
+
+# Where head_title is a reference to that particular class or id(s).
