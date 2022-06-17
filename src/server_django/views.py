@@ -9,7 +9,7 @@ def home_page(request):
     return render(request, "hello_world_bs.html", {"title": my_title})
 
 def about_page(request):
-    return HttpResponse("<h1>About us</h1>")
+    return render(request, "hello_world_bs.html", {"title": "About us"})
 
 def contact_page(request):
-    return HttpResponse("<h1>Contact</h1>")
+    return render(request, "hello_world_bs.html", {"title": "Contact us"})
