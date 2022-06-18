@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 {{ title }}
-<h3>Username: {{ user }}</h3>
-<h3>Auth: {{ user.is_authenticated }}</h3>
+{{ user }}
+{{ user.is_authenticated }}
 
 {% if user.is_authenticated %}
     <h1>User only data</h1>
@@ -15,3 +16,7 @@
 {% endif %}
 
 {% endblock %}
+
+
+For more: https://docs.djangoproject.com/en/4.0/ref/templates/builtins/
+

@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import get_template
+from matplotlib.pyplot import title
 
 # def home_page(request):
 #     return HttpResponse("<h1>Hello World</h1>")
@@ -11,7 +12,8 @@ def home_page(request):
 
 def home_page1(request):
     my_title = "Hello there..."
-    return render(request, "home.html", {"title": my_title})
+    context = {"title": my_title, "my_list": [1, 2, 3, 4, 5]} 
+    return render(request, "home.html", context)
 
 def about_page(request):
     return render(request, "about.html", {"title": "About us"})
